@@ -17,6 +17,7 @@ class CreateCommentsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('comm_content',5000);
+            $table->foreignId('article_id')->constrained();
         });
     }
 
