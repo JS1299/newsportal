@@ -20,10 +20,11 @@ body{
 
 nav#fleks
 {
-    background-color:rgba(14,2,35,0.8);
-    position:fixed;
+    background-color: rgba(48, 95, 144, 0.8);
+    /*position:fixed;*/
     z-index:1;
     width:100%;
+    height: 54px;
 }
 
 .inline{
@@ -35,7 +36,7 @@ nav#fleks
 
 header div#nav-bar
 {
-    background-color:rgba(14,2,35,0.5);
+    background-color: rgba(14, 2, 35, 0.5);
     position:relative;
     width:100%;
     height:100%;
@@ -51,6 +52,37 @@ li.right
 .left
 {
     left:20px;
+}
+
+header a:link{
+    text-decoration:none;
+    color:#FFFFFF;
+}
+
+header a:hover
+{
+    color: #ffad46;
+}
+
+.logoimg
+{
+    vertical-align: middle;
+    width:190px;
+    height:30px;
+}
+
+.logo
+{
+    bottom: 4px;
+}
+
+div#fix
+{
+    background-color:#1f6fb2;
+}
+.center
+{
+    text-align: center;
 }
 
 
