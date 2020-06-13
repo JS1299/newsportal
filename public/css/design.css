@@ -20,7 +20,7 @@ body{
 
 nav#fleks
 {
-    background-color: rgba(48, 95, 144, 0.8);
+    background-color: rgba(157, 38, 78, 0.8);
     /*position:fixed;*/
     z-index:1;
     width:100%;
@@ -31,6 +31,7 @@ nav#fleks
     display:inline;
     position:relative;
     padding-right: 10px;
+    font-size: 17px;
     color:rgb(255,255,255);
 }
 
@@ -47,11 +48,13 @@ li.right
     position:relative;
     float:right;
     right:20px;
+    bottom: 2px;
 }
 
 .left
 {
     left:20px;
+    bottom: 28px;
 }
 
 header a:link{
@@ -64,16 +67,11 @@ header a:hover
     color: #ffad46;
 }
 
-.logoimg
-{
-    vertical-align: middle;
-    width:190px;
-    height:30px;
-}
-
 .logo
 {
-    bottom: 4px;
+    font-size:40px;
+    bottom:24px;
+    padding-right: 25px;
 }
 
 div#fix
