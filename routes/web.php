@@ -21,6 +21,6 @@ Route::get('/', 'IndexController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/article/{id}', 'ArticleController@show')->name('showArticle');
-Route::get('article/page/add', 'ArticleController@create')->name('newArticle');
 
+Route::get('article/page/add', 'ArticleController@create')->name('newArticle');
 Route::post('articles/page/add', 'ArticleController@store')->name('storeArticle');

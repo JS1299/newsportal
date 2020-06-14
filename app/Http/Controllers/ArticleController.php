@@ -12,18 +12,25 @@ class ArticleController extends Controller
     {
         $article = Article::select(['title', 'created_at', 'content','image'])->where('id', $id)->first();
         $neededid = Article::select('categories_id')->where('id',$id)->first();
-        $category = Category::select('category')->where('id', $neededid->categories_id)->first();
+        $category = Category::select(['category'])->where('id', $neededid->categories_id)->first();
         return view('ShowArticle')->with(['article'=>$article,
             'category'=>$category]);
     }
 
     public function create()
     {
-        return view('newArticle');
+        $categories = Category::select(['id','category'])->get();
+//        dump($categories);
+        return view('newArticle')->with(['categories'=>$categories]);
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        //
+        //dump($request->all());
+        $data = $request->all();
+        $article = new Article();
+        $article->fill($data);
+        $article->save();
+        //dump($article);
     }
 }

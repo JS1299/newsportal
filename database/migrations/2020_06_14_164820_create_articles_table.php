@@ -20,7 +20,7 @@ class CreateArticlesTable extends Migration
             $table->foreignId('categories_id')->constrained();
             $table->string('brief_desc', 5000);
             $table->text('content');
-            $table->string('image', 300);
+            $table->string('image', 300)->nullable();
         });
     }
 
