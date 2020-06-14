@@ -17,7 +17,7 @@
 
 <header>
     <div id="nav-bar">
-        <nav id = "fleks">
+        <nav id = "des">
             <ul class="menu">
                 <li class="left inline logo">
                     <a href="{{ url('/') }}">
@@ -64,7 +64,5 @@
 </header>
 
 @yield('content')
-<hr>
-<p class="center">This site was developed by Jurijs Šļuncevs and Jevgenijs Rubcovs</p>
 </body>
 </html>

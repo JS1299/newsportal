@@ -14,8 +14,8 @@
 
 <header>
     <div id="nav-bar">
-        <nav id = "fleks">
-            <ul class="menu">
+        <nav id = "des1">
+            <ul class="menu" id="notfixed">
                 <li class="left inline logo">
                     <a href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
