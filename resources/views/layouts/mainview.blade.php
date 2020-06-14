@@ -49,7 +49,7 @@
                                 {{ __('Logout') }}
                             </a>
                             @if(auth()->user()->role == 1)
-                            <a class="dropdown-item">{{ __('Add Article') }}</a>
+                            <a href="{{ route('newArticle') }}" class="dropdown-item">{{ __('Add Article') }}</a>
                             @endif
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

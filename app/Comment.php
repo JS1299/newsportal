@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class comment extends Model
+class Comment extends Model
 {
     public function article()
     {
-        return $this->belongsTo('App\article');
+        return $this->belongsTo('App\Article');
     }
 }

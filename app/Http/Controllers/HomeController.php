@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $articles = Article::select(['id','title', 'category','brief_desc','content', 'image'])->get();
+        $articles = Article::select(['id','title', 'brief_desc','content', 'image'])->get();
         return view('mainpage')->with(['articles' => $articles]);
     }
 }

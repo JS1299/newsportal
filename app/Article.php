@@ -8,6 +8,11 @@ class Article extends Model
 {
     public function comments()
     {
-        return $this->hasMany('App\comment');
+        return $this->hasMany('App\Comment');
+    }
+
+    public function category()
+    {
+        return $this->hasOne('App\Category');
     }
 }

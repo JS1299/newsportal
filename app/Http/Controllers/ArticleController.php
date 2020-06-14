@@ -4,12 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Category;
 
 class ArticleController extends Controller
 {
     public function show($id)
     {
-        $article = Article::select(['title', 'created_at', 'category', 'content','image'])->where('id', $id)->first();
-        return view('ShowArticle')->with(['article'=>$article]);
+        $article = Article::select(['title', 'created_at', 'content','image'])->where('id', $id)->first();
+        $neededid = Article::select('categories_id')->where('id',$id)->first();
+        $category = Category::select('category')->where('id', $neededid->categories_id)->first();
+        return view('ShowArticle')->with(['article'=>$article,
+            'category'=>$category]);
+    }
+
+    public function create()
+    {
+        return view('newArticle');
+    }
+
+    public function store()
+    {
+        //
     }
 }
