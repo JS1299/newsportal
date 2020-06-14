@@ -19,9 +19,6 @@
     <div id="nav-bar">
         <nav id = "fleks">
             <ul class="menu">
-{{--                <div class="inline left logo">--}}
-{{--                    <a role="button" href="/" ><img class="logoimg" src = "/images/logo.png"  alt="logo"></a>--}}
-{{--                </div>--}}
                 <li class="left inline logo">
                     <a href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -52,7 +49,7 @@
                                 {{ __('Logout') }}
                             </a>
                             @if(auth()->user()->role == 1)
-                            <a class="dropdown-item">Add article</a>
+                            <a class="dropdown-item">{{ __('Add Article') }}</a>
                             @endif
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

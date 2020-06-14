@@ -77,8 +77,11 @@
 
 <div class="user">
     <header class="user__header">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
-        <h1 class="user__title">A lightweight and simple sign-up form</h1>
+{{--        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />--}}
+        <p class="logo1">
+            {{ config('app.name', 'Laravel') }}
+        </p>
+        <h1 class="user__title">Register</h1>
     </header>
 
     <form class="form" method="POST" action="{{ route('register') }}">

@@ -74,13 +74,30 @@ header a:hover
     padding-right: 25px;
 }
 
+.logo1
+{
+    font-size: 60px;
+    color:white;
+}
+
+.btn2
+{
+    float: right;
+}
+
 div#fix
 {
-    background-color:#1f6fb2;
+    background-color:rgba(157, 38, 78, 1);
+    color:white;
 }
+
+div#fix a:hover
+{
+    color:black;
+}
+
 .center
 {
     text-align: center;
 }
-
 
