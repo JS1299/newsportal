@@ -19,6 +19,7 @@ class ArticleController extends Controller
 
     public function create()
     {
+        $this->authorize('create', Article::class);
         $categories = Category::select(['id','category'])->get();
 //        dump($categories);
         return view('newArticle')->with(['categories'=>$categories]);

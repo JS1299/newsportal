@@ -134,6 +134,8 @@ img#articleimg
 {
     padding-top: 15px;
     padding-bottom: 15px;
+    width:50%;
+    height:65%;
 }
 
 div#article
