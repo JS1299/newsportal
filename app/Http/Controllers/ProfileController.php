@@ -34,6 +34,7 @@ class ProfileController extends Controller
         // Set user name
         $user->name = $request->input('name');
 
+//        dd($request);
         // Check if a profile image has been uploaded
         if ($request->has('profile_image')) {
             // Get image file

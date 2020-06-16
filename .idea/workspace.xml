@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fbdc107-a0e2-4f81-8d2f-f9e96b9f7c59" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Traits/UploadTrait.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/design.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/design.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/mainview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/mainview.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/afanasij-fleksovich_1592257621.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/afanasij-fleksovich_1592260711.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/afanasij-fleksovich_1592261327.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/afanasij-fleksovich_1592298351.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-slun_1592252829.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-sluncevs_1592252809.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-sluncevs_1592253727.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-sluncevs_1592253753.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-sluncevs_1592300223.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-sluncevs_1592300756.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-sluncevs_1592302065.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/newArticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/newArticle.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +178,7 @@
       <workItem from="1592120153868" duration="34343000" />
       <workItem from="1592218230345" duration="642000" />
       <workItem from="1592247161704" duration="14366000" />
-      <workItem from="1592298155923" duration="3217000" />
+      <workItem from="1592298155923" duration="9136000" />
     </task>
     <servers />
   </component>
@@ -183,10 +190,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="524" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1592144630920" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592132719288">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592303714556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1592132719288" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1592303714556" />
     <state x="277" y="55" key="SettingsEditor" timestamp="1592120177087">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

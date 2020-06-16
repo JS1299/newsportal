@@ -32,7 +32,7 @@
 {{--        </div>--}}
 {{--    </div>--}}
 <div class="container" id="forma">
-<form method="POST" action="{{route('storeArticle')}}">
+<form method="POST" enctype="multipart/form-data" action="{{route('storeArticle')}}">
     <div class="form-group">
         <label for="title">Virsraksts</label>
         <input type="text" class="form-control" id="title" name="title">
@@ -56,6 +56,17 @@
         <label for="content">Saturs</label>
         <textarea name="content" class="form-control" id="content" rows="8"></textarea>
     </div>
+
+    <div class="form-group row">
+        <label for="image" class="col-md-4 col-form-label text-md-right">Article Image</label>
+        <div class="col-md-6">
+            <input id="image" type="file" class="form-control" name="image">
+{{--            @if (auth()->user()->image)--}}
+{{--                <code>{{ auth()->user()->image }}</code>--}}
+{{--            @endif--}}
+        </div>
+    </div>
+
     <button type="submit" class="btn btn-primary">Pievienot</button>
     {{csrf_field()}}
 </form>
