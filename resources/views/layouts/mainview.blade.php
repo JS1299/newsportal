@@ -37,20 +37,38 @@
                         </li>
                     @endif
                 @else
-                    <li class="nav-item dropdown right inline">
-                        <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
+                    <li class="nav-item dropdown right1 inline">
+{{--                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
+{{--                            @if (auth()->user()->image)--}}
+{{--                                <img src="{{ asset(auth()->user()->image) }}" style="width: 40px; height: 40px; border-radius: 50%; margin-bottom: 5px;">--}}
+{{--                            @endif--}}
+{{--                            {{ Auth::user()->name }} <span class="caret"></span>--}}
+{{--                        </a>--}}
+
+                        @if (auth()->user()->image)
+                            <a id="navbarDropdown" class="nav-link1 dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <img src="{{ asset(auth()->user()->image) }}" style="width: 40px; height: 40px; border-radius: 50%; margin-bottom: 5px;">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+                        @else
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+                        @endif
+
 
                         <div id="fix" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
+
+                            @if(auth()->user()->role == 1)
+                                <a href="{{ route('newArticle') }}" class="dropdown-item">{{ __('Add Article') }}</a>
+                            @endif
+
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-                            @if(auth()->user()->role == 1)
-                            <a href="{{ route('newArticle') }}" class="dropdown-item">{{ __('Add Article') }}</a>
-                            @endif
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
