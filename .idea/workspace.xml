@@ -3,21 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7fbdc107-a0e2-4f81-8d2f-f9e96b9f7c59" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/design.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/design.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/afanasij-fleksovich_1592257621.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/afanasij-fleksovich_1592260711.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/afanasij-fleksovich_1592261327.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/afanasij-fleksovich_1592298351.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-slun_1592252829.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-sluncevs_1592252809.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-sluncevs_1592253727.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-sluncevs_1592253753.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-sluncevs_1592300223.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-sluncevs_1592300756.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/jurijs-sluncevs_1592302065.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mainpage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mainpage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/newArticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/newArticle.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +167,7 @@
       <workItem from="1592120153868" duration="34343000" />
       <workItem from="1592218230345" duration="642000" />
       <workItem from="1592247161704" duration="14366000" />
-      <workItem from="1592298155923" duration="9136000" />
+      <workItem from="1592298155923" duration="12572000" />
     </task>
     <servers />
   </component>

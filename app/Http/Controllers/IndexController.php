@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $articles = Article::select(['id','title','categories_id','brief_desc','content', 'image'])->get();
+        $articles = Article::select(['id','title','categories_id','brief_desc','content', 'image'])->orderby('created_at', 'DESC')->get();
 //        dump($articles);
         return view('mainpage')->with(['articles' => $articles]);
     }

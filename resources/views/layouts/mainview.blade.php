@@ -26,14 +26,14 @@
                 </li>
                 <li class="inline left">Politika</li>
                 <li class="inline left">Sports</li>
-                <li class="inline left">Kriminals</li>
+                <li class="inline left">Krimināls</li>
                 @guest
                     <li class="nav-item inline right">
-                        <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a href="{{ route('login') }}">{{ __('Ienākt') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item inline right">
-                            <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a href="{{ route('register') }}">{{ __('Reģistrēties') }}</a>
                         </li>
                     @endif
                 @else
@@ -58,7 +58,7 @@
 
 
                         <div id="fix" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
+                            <a class="dropdown-item" href="{{ route('profile') }}">Profils</a>
 
                             @if(auth()->user()->role == 1)
                                 <a href="{{ route('newArticle') }}" class="dropdown-item">{{ __('Add Article') }}</a>
