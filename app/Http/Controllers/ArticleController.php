@@ -51,11 +51,12 @@ class ArticleController extends Controller
         return redirect('/')->with(['articles' => $articles]);
     }
 
-    public function delete($article)
+    public function delete(\App\Article $article)
     {
-        $article_del = Article::where('id', $article)->first();
+        $this->authorize('create', Article::class);
+//        $article_del = Article::where('id', $article)->first();
 //        dump($article_del);
-        $article_del->delete();
+        $article->delete();
         return redirect('/');
     }
 }
