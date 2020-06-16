@@ -47,6 +47,15 @@ class ArticleController extends Controller
         $article->save();
 
         $articles = Article::select(['id','title','categories_id','brief_desc','content', 'image'])->orderby('created_at', 'DESC')->get();
-        return view('mainpage')->with(['articles' => $articles]);
+//        return view('mainpage')->with(['articles' => $articles]);
+        return redirect('/')->with(['articles' => $articles]);
+    }
+
+    public function delete($article)
+    {
+        $article_del = Article::where('id', $article)->first();
+//        dump($article_del);
+        $article_del->delete();
+        return redirect('/');
     }
 }

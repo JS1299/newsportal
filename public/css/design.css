@@ -82,6 +82,7 @@ header a:link{
 header a:hover
 {
     color: #ffad46;
+    text-decoration: none;
 }
 
 .logo
@@ -164,4 +165,29 @@ div#profile
 .nav-link {
     display: block;
     /*padding: 0.5rem 1rem;*/
+}
+
+img#edit
+{
+    width:35px;
+    height: auto;
+}
+
+div#articlepadding
+{
+    padding-bottom: 30px;
+}
+
+.imageright
+{
+    float: right;
+}
+
+button#wborder
+{
+    outline: 0 !important;
+    border: 0;
+    padding: 0;
+    background: none;
+    float: right;
 }

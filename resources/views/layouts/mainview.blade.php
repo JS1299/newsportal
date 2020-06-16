@@ -60,7 +60,7 @@
                         <div id="fix" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('profile') }}">Profils</a>
 
-                            @if(auth()->user()->role == 1)
+                            @if(auth()->user()->role == 1 || auth()->user()->role == 2)
                                 <a href="{{ route('newArticle') }}" class="dropdown-item">{{ __('Add Article') }}</a>
                             @endif
 
