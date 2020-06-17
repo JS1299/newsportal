@@ -28,4 +28,7 @@ Route::post('article/page/add', 'ArticleController@store')->name('storeArticle')
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
 
+Route::get('/article/page/edit/{article}', 'ArticleController@showArticleEdit')->name('showArticleEdit');
+Route::put('/article/page/edit/{article}', 'ArticleController@updateArticle')->name('updateArticle');
+
 Route::delete('/article/page/delete/{article}', 'ArticleController@delete')->name('deleteArticle');

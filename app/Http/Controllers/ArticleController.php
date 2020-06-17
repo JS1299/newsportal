@@ -46,9 +46,9 @@ class ArticleController extends Controller
 
         $article->save();
 
-        $articles = Article::select(['id','title','categories_id','brief_desc','content', 'image'])->orderby('created_at', 'DESC')->get();
+//        $articles = Article::select(['id','title','categories_id','brief_desc','content', 'image'])->orderby('created_at', 'DESC')->get();
 //        return view('mainpage')->with(['articles' => $articles]);
-        return redirect('/')->with(['articles' => $articles]);
+        return redirect('/');
     }
 
     public function delete(\App\Article $article)
@@ -57,6 +57,45 @@ class ArticleController extends Controller
 //        $article_del = Article::where('id', $article)->first();
 //        dump($article_del);
         $article->delete();
+        return redirect('/');
+    }
+
+    public function showArticleEdit(\App\Article $article)
+    {
+        $this->authorize('create', Article::class);
+        $categories = Category::select(['id','category'])->get();
+//        dump($categories);
+        return view('updateArticle')->with(['categories'=>$categories,
+                                                'article'=>$article
+            ]);
+    }
+
+    public function updateArticle(Request $request, \App\Article $article)
+    {
+        $this->authorize('create', Article::class);
+
+        $data = request()->validate([
+            'title' => 'required',
+            'categories_id' => ['required'],
+            'brief_desc' => 'required',
+            'content' => 'required',
+            'image' => '',
+        ]);
+
+//        dd($article);
+        $data = $request->all();
+
+        if ($request->has('image')) {
+            $image = $request->file('image');
+            $name = Str::slug($request->input('title')).'_'.time();
+            $folder = '/uploads/images/';
+            $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
+            $this->uploadOne($image, $folder, 'public', $name);
+            $data['image'] = $filePath;
+        }
+
+        $article->update($data);
+//        $articles_tmp = Article::select(['id','title','categories_id','brief_desc','content', 'image'])->orderby('created_at', 'DESC')->get();
         return redirect('/');
     }
 }

@@ -190,4 +190,10 @@ button#wborder
     padding: 0;
     background: none;
     float: right;
+    /*bottom: 160px;*/
+}
+
+a#edita
+{
+    position: absolute;
 }
