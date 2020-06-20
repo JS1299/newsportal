@@ -34,13 +34,13 @@
 <div class="container" id="forma">
 <form method="POST" enctype="multipart/form-data" action="{{route('storeArticle')}}">
     <div class="form-group">
-        <label for="title">Virsraksts</label>
+        <label for="title">{{ __('Virsraksts')}}</label>
         <input type="text" class="form-control" id="title" name="title">
     </div>
     <div class="form-group">
-        <label for="categories_id">Kategorija</label>
+        <label for="categories_id">{{ __('Kategorija')}}</label>
         <select class="form-control" id="categories_id" name="categories_id">
-            <option>Izvēlēties kategoriju</option>
+            <option>{{__('Izvēlēties kategoriju')}}</option>
             @foreach($categories as $category)
                 <option value="{{$category->id}}">{{$category->category}}</option>
             @endforeach
@@ -48,12 +48,12 @@
     </div>
 
     <div class="form-group">
-        <label for="brief_desc">Īss apraksts</label>
+        <label for="brief_desc">{{ __('Īss apraksts')}}</label>
         <textarea class="form-control" name="brief_desc" id="brief_desc" rows="3"></textarea>
     </div>
 
     <div class="form-group">
-        <label for="content">Saturs</label>
+        <label for="content">{{ __('Saturs')}}</label>
         <textarea name="content" class="form-control" id="content" rows="6"></textarea>
     </div>
 
@@ -65,11 +65,11 @@
 {{--    </div>--}}
 
     <div class="form-group">
-        <label for="image">Pievienot bildi</label>
+        <label for="image">{{ __('Pievienot bildi')}}</label>
         <input id="image" type="file" class="form-control" name="image">
     </div>
 
-    <button type="submit" class="btn btn-primary">Pievienot</button>
+    <button type="submit" class="btn btn-primary">{{ __('Pievienot') }}</button>
     {{csrf_field()}}
 </form>
 </div>

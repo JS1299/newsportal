@@ -24,9 +24,9 @@
                     {{ config('app.name', 'Laravel') }}
                     </a>
                 </li>
-                <li class="inline left">Politika</li>
-                <li class="inline left">Sports</li>
-                <li class="inline left">Krimināls</li>
+                <li class="inline left">{{__('Politika')}}</li>
+                <li class="inline left">{{__('Sports')}}</li>
+                <li class="inline left">{{__('Krimināls')}}</li>
                 @guest
                     <li class="nav-item inline right">
                         <a href="{{ route('login') }}">{{ __('Ienākt') }}</a>
@@ -58,16 +58,16 @@
 
 
                         <div id="fix" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('profile') }}">Profils</a>
+                            <a class="dropdown-item" href="{{ route('profile') }}">{{ __('Profils') }}</a>
 
                             @if(auth()->user()->role == 1 || auth()->user()->role == 2)
-                                <a href="{{ route('newArticle') }}" class="dropdown-item">{{ __('Add Article') }}</a>
+                                <a href="{{ route('newArticle') }}" class="dropdown-item">{{ __('Pievienot ziņu') }}</a>
                             @endif
 
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('Iziet') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

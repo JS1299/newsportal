@@ -23,11 +23,11 @@
                 </li>
                 @guest
                     <li class="nav-item inline right">
-                        <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a href="{{ route('login') }}">{{ __('Ienākt') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item inline right">
-                            <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a href="{{ route('register') }}">{{ __('Reģistrēties') }}</a>
                         </li>
                     @endif
                 @else

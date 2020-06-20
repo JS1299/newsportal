@@ -76,7 +76,7 @@
         <p class="logo1">
             {{ config('app.name', 'Laravel') }}
         </p>
-        <h1 class="user__title">Login</h1>
+        <h1 class="user__title">{{ __('Ienākt') }}</h1>
     </header>
 
     <form class="form" method="POST" action="{{ route('login') }}">

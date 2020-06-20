@@ -5,8 +5,8 @@
         @if($article)
             <div id="article">
                 <h2>{{$article->title}}</h2>
-                <h5>Kategorija: {{$category->category}}</h5>
-                <h6>Pievienots: {{$article->created_at}}</h6>
+                <h5>{{ __('Kategorija') }}: {{$category->category}}</h5>
+                <h6>{{ __('Pievienots') }}: {{$article->created_at}}</h6>
                 <img id="articleimg" src="{{$article->image}}" />
                 <p>{!!$article->content!!}</p>
             </div>
