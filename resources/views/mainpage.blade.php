@@ -27,5 +27,5 @@
         </div>
     </div>
     <hr>
-    <p class="center">This site was developed by Jurijs Šļuncevs(js19100) and Jevgenijs Rubcovs</p>
+    <p class="center">This site was developed by Jurijs Šļuncevs (js19100) and Jevgenijs Rubcovs (jr19024)</p>
 @endsection

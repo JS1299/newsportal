@@ -103,6 +103,8 @@
         </div>
 
         <button class="btn1" type="submit">Login</button>
+        <a href="/login/github" class="btn2" >Sign in with Github</a>
+
         <div class="form__group">
             <input class="form_inpt-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 

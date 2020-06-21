@@ -7,6 +7,7 @@ use App\Article;
 use App\Category;
 use App\Traits\UploadTrait;
 use Illuminate\Support\Str;
+use \Auth;
 
 class ArticleController extends Controller
 {
