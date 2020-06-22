@@ -24,16 +24,16 @@
                     {{ config('app.name', 'Laravel') }}
                     </a>
                 </li>
-                <li class="inline left">{{__('Politika')}}</li>
+                <li class="inline left">{{__('Politics')}}</li>
                 <li class="inline left">{{__('Sports')}}</li>
-                <li class="inline left">{{__('Krimināls')}}</li>
+                <li class="inline left">{{__('Criminal')}}</li>
                 @guest
                     <li class="nav-item inline right">
-                        <a href="{{ route('login') }}">{{ __('Ienākt') }}</a>
+                        <a href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item inline right">
-                            <a href="{{ route('register') }}">{{ __('Reģistrēties') }}</a>
+                            <a href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
                 @else
@@ -58,16 +58,16 @@
 
 
                         <div id="fix" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('profile') }}">{{ __('Profils') }}</a>
+                            <a class="dropdown-item" href="{{ route('profile') }}">{{ __('Profile') }}</a>
 
                             @if(auth()->user()->role == 1 || auth()->user()->role == 2)
-                                <a href="{{ route('newArticle') }}" class="dropdown-item">{{ __('Pievienot ziņu') }}</a>
+                                <a href="{{ route('newArticle') }}" class="dropdown-item">{{ __('Add Article') }}</a>
                             @endif
 
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                {{ __('Iziet') }}
+                                {{ __('Logout') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

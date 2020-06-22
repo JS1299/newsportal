@@ -197,3 +197,24 @@ a#edita
 {
     position: absolute;
 }
+
+#github
+{
+    color:white;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#github1
+{
+    width:45px;
+    height: auto;
+    position: relative;
+}
+#github2
+{
+    style=margin: 0 auto;
+    display:block;
+    text-align: center;
+}

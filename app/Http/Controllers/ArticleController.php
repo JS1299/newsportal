@@ -77,7 +77,7 @@ class ArticleController extends Controller
 
         $data = request()->validate([
             'title' => 'required',
-            'categories_id' => ['required'],
+            'categories_id' => 'required',
             'brief_desc' => 'required',
             'content' => 'required',
             'image' => '',

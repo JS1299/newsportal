@@ -20,10 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fbdc107-a0e2-4f81-8d2f-f9e96b9f7c59" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/lv/text.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/design.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/design.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ShowArticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ShowArticle.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/login_register_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/login_register_view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/mainview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/mainview.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/newArticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/newArticle.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/updateArticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/updateArticle.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +43,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -190,7 +212,8 @@
       <workItem from="1592380515877" duration="4452000" />
       <workItem from="1592667745891" duration="366000" />
       <workItem from="1592679788529" duration="1792000" />
-      <workItem from="1592748217678" duration="610000" />
+      <workItem from="1592748217678" duration="1170000" />
+      <workItem from="1592813496576" duration="5931000" />
     </task>
     <servers />
   </component>
@@ -227,17 +250,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592120177087" />
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1592748220816">
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1592813500262">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592748220815" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592813500262" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1592345493716">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1592345493716" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1592141382041">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1592816867362">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1592141382041" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1592816867362" />
   </component>
 </project>

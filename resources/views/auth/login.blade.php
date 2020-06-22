@@ -76,7 +76,7 @@
         <p class="logo1">
             {{ config('app.name', 'Laravel') }}
         </p>
-        <h1 class="user__title">{{ __('Ienākt') }}</h1>
+        <h1 class="user__title">{{ __('Login') }}</h1>
     </header>
 
     <form class="form" method="POST" action="{{ route('login') }}">
@@ -103,7 +103,6 @@
         </div>
 
         <button class="btn1" type="submit">Login</button>
-        <a href="/login/github" class="btn2" >Sign in with Github</a>
 
         <div class="form__group">
             <input class="form_inpt-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -117,6 +116,10 @@
                     {{ __('Forgot Your Password?') }}
                 </a>
             @endif
+        </div>
+        <div>
+            <h4 id="github">Login via GitHub</h4>
+            <a id="github2" href="/login/github"><img id="github1" src="https://img.icons8.com/ios-filled/50/000000/github.png"/></a>
         </div>
     </form>
 </div>
