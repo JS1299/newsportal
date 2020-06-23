@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     protected $fillable = ['title', 'categories_id', 'brief_desc', 'content', 'image'];
+    /**
+     * @var mixed
+     */
 
     public function comments()
     {

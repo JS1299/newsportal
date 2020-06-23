@@ -9,6 +9,6 @@ class Comment extends Model
     protected $fillable = ['comm_content', 'article_id'];
     public function article()
     {
-        return $this->belongsTo('App\Article');
+        return $this->belongsTo(Comment::class);
     }
 }
