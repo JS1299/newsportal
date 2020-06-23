@@ -21,27 +21,27 @@ class DatabaseSeeder extends Seeder
         Comment::truncate();
         Category::truncate();
         DB::table('categories')->insert([
-            'category' => 'Veselība'
+            'category' => 'Health'
         ]);
 
         DB::table('categories')->insert([
-            'category' => 'Bizness'
+            'category' => 'Business'
         ]);
 
         DB::table('categories')->insert([
-            'category' => 'Ārzemēs'
+            'category' => 'Abroad'
         ]);
 
         DB::table('categories')->insert([
-            'category' => 'Auto'
+            'category' => 'Cars'
         ]);
 
         DB::table('categories')->insert([
-            'category' => 'Krimiāls'
+            'category' => 'Criminal'
         ]);
 
         DB::table('categories')->insert([
-            'category' => 'Sports'
+            'category' => 'Sport'
         ]);
         DB::table('articles')->insert([
             'title' => 'Latvijā nav konstatēti jauni Covid-19 gadījumi',

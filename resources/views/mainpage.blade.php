@@ -1,6 +1,5 @@
 @extends('layouts.mainview')
 @section('content')
-
     <div class="container" id="ots">
         <div class="row">
         @foreach($articles as $article)
@@ -19,6 +18,20 @@
                                 <img alt="Delete" id="edit" src="https://img.icons8.com/flat_round/64/000000/delete-sign.png"/>
                             </button>
                         </form>
+                        @elseif (auth()->user()->role == 0 || auth()->user()->role == 1 || auth()->user()->role == 2)
+                            <div>
+                                <div>
+                                    <form method="POST" action="/">
+                                        {{ csrf_field() }}
+                                        <div class="form-group">
+                                            <textarea name="cm" placeholder="Your comment" class="form-control"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary">Add comment</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                     @endif
                 @endauth
 

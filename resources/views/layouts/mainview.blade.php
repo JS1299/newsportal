@@ -37,6 +37,9 @@
                         </li>
                     @endif
                 @else
+                    @if(auth()->user()->role == 1)
+                        <a class="inline left" href="{{ route('UsersPanel') }}">{{__('Users')}}</a>
+                    @endif
                     <li class="nav-item dropdown right1 inline">
 {{--                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
 {{--                            @if (auth()->user()->image)--}}

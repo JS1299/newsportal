@@ -10,11 +10,20 @@ class Article extends Model
 
     public function comments()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('App\Article');
     }
 
     public function category()
     {
         return $this->hasOne('App\Category');
     }
+    public function addComment($body)
+    {
+        Comment::create([
+            'body' => $body,
+            'article_id' => $this->id
+        ]);
+
+    }
+
 }

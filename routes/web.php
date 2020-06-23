@@ -23,11 +23,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/login/github', 'Auth\LoginController@github');
 Route::get('/login/github/redirect', 'Auth\LoginController@githubRedirect');
 
+Route::get('/article/{id}', 'ArticleController@show')->name('showArticle');
 
 Route::get('/article/{id}', 'ArticleController@show')->name('showArticle');
 
+Route::get('/users', 'UsersController@users')->name('UsersPanel');
+
 Route::get('article/page/add', 'ArticleController@create')->name('newArticle');
 Route::post('article/page/add', 'ArticleController@store')->name('storeArticle');
+
+Route::post('/', 'CommentsController@store')->name('storeComment');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
