@@ -45,7 +45,7 @@ class User extends Authenticatable
 
     public function scopeUserr($querry)
     {
-        return $querry->where('name',Auth::user()->name);
+        return $querry->where('id',Auth::user()->id);
     }
 
 

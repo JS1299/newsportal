@@ -18,6 +18,7 @@
                                     <tr>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
+                                        <td><a href="#">Suspend user</a></td>
                                     </tr>
                                 @empty
                                     <tr>
@@ -30,7 +31,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 @endsection

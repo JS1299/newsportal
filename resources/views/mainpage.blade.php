@@ -9,16 +9,7 @@
                 <p>{{$article->brief_desc}}</p>
 {{--                <p><a class="btn btn-secondary" href="#" role="button">Lasīt vairāk&raquo;</a></p>--}}
                 @auth()
-                    @if(auth()->user()->role == 1 || auth()->user()->role == 2)
-                        <a href="{{route('showArticleEdit',['article'=>$article->id])}}" id="edita"><img id="edit" src="https://img.icons8.com/fluent/48/000000/edit.png"/></a>
-                        <form action="{{route('deleteArticle', ['article'=>$article->id])}}" method="POST">
-                            <input type="hidden" name="_method" value="DELETE">
-                            {{csrf_field()}}
-                            <button id="wborder" type="submit">
-                                <img alt="Delete" id="edit" src="https://img.icons8.com/flat_round/64/000000/delete-sign.png"/>
-                            </button>
-                        </form>
-                        @elseif (auth()->user()->role == 0 || auth()->user()->role == 1 || auth()->user()->role == 2)
+                        @if (auth()->user()->role == 0 || auth()->user()->role == 1 || auth()->user()->role == 2)
                             <div>
                                 <div>
                                     <form method="POST" action="/">
@@ -32,9 +23,18 @@
                                     </form>
                                 </div>
                             </div>
+                            @if(auth()->user()->role == 1 || auth()->user()->role == 2)
+                                <a href="{{route('showArticleEdit',['article'=>$article->id])}}" id="edita"><img id="edit" src="https://img.icons8.com/fluent/48/000000/edit.png"/></a>
+                                <form action="{{route('deleteArticle', ['article'=>$article->id])}}" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    {{csrf_field()}}
+                                    <button id="wborder" type="submit">
+                                        <img alt="Delete" id="edit" src="https://img.icons8.com/flat_round/64/000000/delete-sign.png"/>
+                                    </button>
+                                </form>
+                        @endif
                     @endif
                 @endauth
-
             </div>
         @endforeach
         </div>
