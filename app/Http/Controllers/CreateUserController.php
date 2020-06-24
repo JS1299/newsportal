@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Policies\ArticlePolicy;
 use Illuminate\Http\Request;
 use App\User;
 use App\Auth;
@@ -13,12 +14,13 @@ class CreateUserController extends Controller
 {
     public function newModerator()
     {
-        $this->authorize('create', User::class);
+        $this->authorize('create1', Article::class);
         return view('CreateModerator');
     }
 
     public function storeModerator(Request $request)
     {
+        $this->authorize('create1', Article::class);
         $user = new User();
         $user->password = Hash::make($request->password);
         $user->email = $request->email;

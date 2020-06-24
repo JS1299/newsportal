@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\User;
 use \Auth;
+use App\Article;
 
 class UsersController extends Controller
 {
     public function users()
     {
-        $this->authorize('create', User::class);
+        $this->authorize('create1', Article::class);
         $users = User::all();
         return view('UsersPanel', compact('users'));
     }

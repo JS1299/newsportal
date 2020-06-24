@@ -44,6 +44,11 @@ class ArticlePolicy
         return $user->role == 1 || $user->role==2;
     }
 
+    public function create1(User $user)
+    {
+        return $user->role == 1;
+    }
+
     /**
      * Determine whether the user can update the model.
      *
