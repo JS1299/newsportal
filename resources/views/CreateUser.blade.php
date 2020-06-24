@@ -2,7 +2,7 @@
 @section('content')
     <div class="pt-5 position-absolute m-5">
         <h1>Fill a new user's credentials:</h1>
-        <form method="POST" action="#" oninput='pw1.setCustomValidity(pw1.value != pw2.value ? "Passwords do not match!" : "")'>
+        <form action="{{ route('createUser') }}" method="POST" oninput='pw1.setCustomValidity(pw1.value != pw2.value ? "Passwords do not match!" : "")'>
             <div class="form-group pt-5">
                 <label>Name</label>
                 <input name="nm" type="text" class="form-control"  placeholder="Full name">

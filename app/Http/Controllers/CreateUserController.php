@@ -13,10 +13,10 @@ class CreateUserController extends Controller
     public function newuser()
     {
         User::create([
-            'name' => \request('nm'),
-            'email' => \request('email'),
-            'password' => \request('pw'),
-            'role' => \request('role')
+            'name' => request('nm'),
+            'email' => request('email'),
+            'password' => request('pw'),
+            'role' => request('role')
         ]);
     }
 }

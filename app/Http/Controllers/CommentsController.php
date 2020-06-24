@@ -11,8 +11,8 @@ class CommentsController extends Controller
     public function store(Article $article)
     {
         Comment::create([
+            'article_id' =>
             'comm_content' => \request('cm'),
-            'article_id ' => $article->id
         ]);
         return back();
     }

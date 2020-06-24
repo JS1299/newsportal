@@ -12,7 +12,7 @@
                         @if (auth()->user()->role == 0 || auth()->user()->role == 1 || auth()->user()->role == 2)
                             <div>
                                 <div>
-                                    <form method="POST" action="/">
+                                    <form method="POST" action="/article/{{ $article->id }}">
                                         {{ csrf_field() }}
                                         <div class="form-group">
                                             <textarea name="cm" placeholder="Your comment" class="form-control"></textarea>
@@ -27,7 +27,7 @@
                                 <a href="{{route('showArticleEdit',['article'=>$article->id])}}" id="edita"><img id="edit" src="https://img.icons8.com/fluent/48/000000/edit.png"/></a>
                                 <form action="{{route('deleteArticle', ['article'=>$article->id])}}" method="POST">
                                     <input type="hidden" name="_method" value="DELETE">
-                                    {{csrf_field()}}
+                                    {{ csrf_field() }}
                                     <button id="wborder" type="submit">
                                         <img alt="Delete" id="edit" src="https://img.icons8.com/flat_round/64/000000/delete-sign.png"/>
                                     </button>

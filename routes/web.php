@@ -32,7 +32,7 @@ Route::get('/users', 'UsersController@users')->name('UsersPanel');
 Route::get('article/page/add', 'ArticleController@create')->name('newArticle');
 Route::post('article/page/add', 'ArticleController@store')->name('storeArticle');
 
-Route::post('/', 'CommentsController@store')->name('storeComment');
+Route::post('/article/{article}/', 'CommentsController@store')->name('storeComment');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
@@ -42,5 +42,5 @@ Route::put('/article/page/edit/{article}', 'ArticleController@updateArticle')->n
 
 Route::delete('/article/page/delete/{article}', 'ArticleController@delete')->name('deleteArticle');
 
-Route::get('manualuser', 'createuser@newuser')->name('createUser');
+Route::get('/manualuser', 'createusercontroller@newuser')->name('createUser');
 

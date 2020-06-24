@@ -9,7 +9,7 @@ class UsersController extends Controller
 {
     public function users()
     {
-        $users = User::userr()->get();
-        return view('UsersPanel')->withUsers($users);
+        $users = User::all();
+        return view('UsersPanel', compact('users'));
     }
 }

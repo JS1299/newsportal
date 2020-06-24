@@ -4,6 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property mixed id
+ */
 class Article extends Model
 {
     protected $fillable = ['title', 'categories_id', 'brief_desc', 'content', 'image'];
@@ -20,13 +23,4 @@ class Article extends Model
     {
         return $this->hasOne('App\Category');
     }
-    public function addComment($body)
-    {
-        Comment::create([
-            'body' => $body,
-            'article_id' => $this->id
-        ]);
-
-    }
-
 }
