@@ -218,3 +218,26 @@ a#edita
     display:block;
     text-align: center;
 }
+
+.comments
+{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.comments1
+{
+    padding-top:25px;
+}
+
+a#comments2
+{
+    text-decoration: none;
+    color: black;
+}
+
+a#comments2:hover
+{
+    color: #ffad46;
+    text-decoration: none;
+}

@@ -17,7 +17,8 @@ class ArticleController extends Controller
     public function show($id)
     {
         $article = Article::select(['title', 'created_at', 'content','image'])->where('id', $id)->first();
-        $comments = Comment::select(['comm_content', 'created_at'])->where('article_id', $id)->get();
+        $comments = Comment::select(['comm_content', 'created_at'])->orderby('created_at', 'DESC')->where('article_id', $id)->get();
+//        dd($comments);
         $neededid = Article::select('categories_id')->where('id',$id)->first();
         $category = Category::select(['category'])->where('id', $neededid->categories_id)->first();
         return view('ShowArticle')->with(['article'=>$article,
@@ -61,6 +62,7 @@ class ArticleController extends Controller
         $this->authorize('create', Article::class);
 //        $article_del = Article::where('id', $article)->first();
 //        dump($article_del);
+        $deleteAllComment = Comment::select()->where('article_id', $article->id)->delete();
         $article->delete();
         return redirect('/');
     }
