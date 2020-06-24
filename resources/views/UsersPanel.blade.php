@@ -21,7 +21,6 @@
                                             @if($user->image != "")<img src="{{ $user->image }}" style="width: 40px; height: 40px; border-radius: 50%; margin-bottom: 5px;"/>
                                             @else [No image]
                                             @endif
-
                                         {{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td><a href="#">Suspend user</a></td>

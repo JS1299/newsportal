@@ -17,10 +17,13 @@ class ArticleController extends Controller
     public function show($id)
     {
         $article = Article::select(['title', 'created_at', 'content','image'])->where('id', $id)->first();
+        $comments = Comment::select(['comm_content', 'created_at'])->where('article_id', $id)->get();
         $neededid = Article::select('categories_id')->where('id',$id)->first();
         $category = Category::select(['category'])->where('id', $neededid->categories_id)->first();
         return view('ShowArticle')->with(['article'=>$article,
-            'category'=>$category]);
+            'comments'=>$comments,
+            'category'=>$category,
+            'id'=>$id]);
     }
 
     public function create()
@@ -68,8 +71,8 @@ class ArticleController extends Controller
         $categories = Category::select(['id','category'])->get();
 //        dump($categories);
         return view('updateArticle')->with(['categories'=>$categories,
-                                                'article'=>$article
-            ]);
+            'article'=>$article
+        ]);
     }
 
     public function updateArticle(Request $request, \App\Article $article)

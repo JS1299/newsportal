@@ -8,12 +8,13 @@ use App\Comment;
 
 class CommentsController extends Controller
 {
-    public function store(Article $article)
+    public function store(Request $request, $id)
     {
-        Comment::create([
-            'article_id' =>
-            'comm_content' => \request('cm'),
-        ]);
+        $data = $request->all();
+        $comment = new Comment();
+        $comment->fill($data);
+        $comment->article_id = $id;
+        $comment->save();
         return back();
     }
 }
