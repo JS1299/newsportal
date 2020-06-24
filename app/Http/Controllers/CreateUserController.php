@@ -10,13 +10,26 @@ use Illuminate\Support\Facades\Hash;
 
 class CreateUserController extends Controller
 {
-    public function newuser()
+    public function newModerator()
     {
-        User::create([
-            'name' => request('nm'),
-            'email' => request('email'),
-            'password' => request('pw'),
-            'role' => request('role')
-        ]);
+        return view('CreateModerator');
+    }
+
+    public function storeModerator(Request $request)
+    {
+//        dd($request);
+
+        $moderator = new User();
+        $data = $request;
+        $password = $data->password;
+        Hash::make($password);
+        $password = bcrypt('secret');
+
+        $moderator->name = $data->name;
+        $moderator->email = $data->email;
+        $moderator->password = $password;
+        $moderator->role = 2;
+        $moderator->save();
+        return back();
     }
 }

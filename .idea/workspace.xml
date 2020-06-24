@@ -21,12 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7fbdc107-a0e2-4f81-8d2f-f9e96b9f7c59" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ShowArticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ShowArticle.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/UsersPanel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/UsersPanel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mainpage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mainpage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CreateUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CreateUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/CreateUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/CreateModerator.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/mainview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/mainview.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +212,7 @@
       <workItem from="1592929715678" duration="1131000" />
       <workItem from="1592991115315" duration="259000" />
       <workItem from="1592995712462" duration="121000" />
-      <workItem from="1592996073569" duration="7728000" />
+      <workItem from="1592996073569" duration="10257000" />
     </task>
     <servers />
   </component>
@@ -261,6 +258,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592813500262" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1593009213061">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593009213061" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1592345493716">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

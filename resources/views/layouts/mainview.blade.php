@@ -21,33 +21,29 @@
             <ul class="menu">
                 <li class="left inline logo">
                     <a href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'Laravel') }}
                     </a>
                 </li>
-                <li class="inline left">{{__('Politics')}}</li>
-                <li class="inline left">{{__('Sports')}}</li>
-                <li class="inline left">{{__('Criminal')}}</li>
+                <li class="inline left">{{('Politics')}}</li>
+                <li class="inline left">{{('Sports')}}</li>
+                <li class="inline left">{{('Criminal')}}</li>
                 @guest
                     <li class="nav-item inline right">
-                        <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a href="{{ route('login') }}">{{ ('Login') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item inline right">
-                            <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a href="{{ route('register') }}">{{ ('Register') }}</a>
                         </li>
                     @endif
                 @else
-                    @if(auth()->user()->role == 1)
-                        <a class="inline left" href="{{ route('UsersPanel') }}">{{__('Users')}}</a>
-                        <a class="inline left" href="{{ route('CreateUser')  }}">{{__('Create a new user')}}</a>
-                    @endif
                     <li class="nav-item dropdown right1 inline">
-{{--                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
-{{--                            @if (auth()->user()->image)--}}
-{{--                                <img src="{{ asset(auth()->user()->image) }}" style="width: 40px; height: 40px; border-radius: 50%; margin-bottom: 5px;">--}}
-{{--                            @endif--}}
-{{--                            {{ Auth::user()->name }} <span class="caret"></span>--}}
-{{--                        </a>--}}
+                        {{--                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
+                        {{--                            @if (auth()->user()->image)--}}
+                        {{--                                <img src="{{ asset(auth()->user()->image) }}" style="width: 40px; height: 40px; border-radius: 50%; margin-bottom: 5px;">--}}
+                        {{--                            @endif--}}
+                        {{--                            {{ Auth::user()->name }} <span class="caret"></span>--}}
+                        {{--                        </a>--}}
 
                         @if (auth()->user()->image)
                             <a id="navbarDropdown" class="nav-link1 dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -62,16 +58,20 @@
 
 
                         <div id="fix" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('profile') }}">{{ __('Profile') }}</a>
-
+                            <a class="dropdown-item" href="{{ route('profile') }}">{{ ('Profile') }}</a>
                             @if(auth()->user()->role == 1 || auth()->user()->role == 2)
-                                <a href="{{ route('newArticle') }}" class="dropdown-item">{{ __('Add Article') }}</a>
+                                <a href="{{ route('newArticle') }}" class="dropdown-item">{{ ('Add Article') }}</a>
+                            @endif
+
+                            @if(auth()->user()->role == 1)
+                                <a class="dropdown-item" href="{{ route('UsersPanel') }}">{{('Users')}}</a>
+                                <a class="dropdown-item" href="{{ route('CreateModerator')  }}">{{('Create a new moderator')}}</a>
                             @endif
 
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ ('Logout') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
