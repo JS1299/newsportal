@@ -27,7 +27,9 @@ Route::get('/article/{id}', 'ArticleController@show')->name('showArticle');
 
 Route::get('/article/{id}', 'ArticleController@show')->name('showArticle');
 
-Route::get('/users', 'UsersController@users')->name('UsersPanel');
+Route::get('user_listing', 'UsersController@index')->name('listOfUsers');
+Route::get('userFetchList', 'UsersController@userFetchList');
+Route::get('active_deactive_user/{id}', 'UsersController@active_deactive_user');
 
 Route::get('article/page/add', 'ArticleController@create')->name('newArticle');
 Route::post('article/page/add', 'ArticleController@store')->name('storeArticle');

@@ -64,7 +64,7 @@
                             @endif
 
                             @if(auth()->user()->role == 1)
-                                <a class="dropdown-item" href="{{ route('UsersPanel') }}">{{('Users')}}</a>
+                                <a class="dropdown-item" href="{{ route('listOfUsers') }}">{{('Users')}}</a>
                                 <a class="dropdown-item" href="{{ route('CreateModerator')  }}">{{('Create a new moderator')}}</a>
                             @endif
 
