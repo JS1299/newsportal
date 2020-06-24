@@ -27,7 +27,12 @@
                                                 @endif</td>
 
                                         <td>{{ $user->email }}</td>
-                                        <td>{{ $user->role }}</td>
+                                        <td>
+                                            @if($user->role == 0)User
+                                            @elseif($user->role == 1) Administrator
+                                            @else Moderator
+                                        @endif
+                                        </td>
                                         <td><a href="#">Suspend user</a></td>
                                     </tr>
                                 @empty
