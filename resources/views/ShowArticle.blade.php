@@ -7,6 +7,7 @@
                     <h1>{{$article->title}}</h1>
                     <h4>{{ ('Category') }}: {{$category->category}}</h4>
                     <h6>{{ ('Added') }}: {{$article->created_at}}</h6>
+                    <h6>{{ ('Added by') }}: {{$article->author}}</h6>
                     <img id="articleimg" src="{{$article->image}}" />
                     <p>{!!$article->content!!}</p>
                 </div>
@@ -20,6 +21,7 @@
                     @foreach($comments as $comment)
                         <li class="list-group-item">
                             <strong>{{ $comment->created_at }}</strong>
+                            {{$comment->author}}:
                             {{$comment->comm_content}}
                         </li>
                     @endforeach

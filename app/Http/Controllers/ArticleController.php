@@ -16,8 +16,8 @@ class ArticleController extends Controller
 
     public function show($id)
     {
-        $article = Article::select(['title', 'created_at', 'content','image'])->where('id', $id)->first();
-        $comments = Comment::select(['comm_content', 'created_at'])->orderby('created_at', 'DESC')->where('article_id', $id)->get();
+        $article = Article::select(['author','title', 'created_at', 'content','image'])->where('id', $id)->first();
+        $comments = Comment::select(['author','comm_content', 'created_at'])->orderby('created_at', 'DESC')->where('article_id', $id)->get();
 //        dd($comments);
         $neededid = Article::select('categories_id')->where('id',$id)->first();
         $category = Category::select(['category'])->where('id', $neededid->categories_id)->first();
@@ -39,6 +39,7 @@ class ArticleController extends Controller
     {
         $data = $request->all();
         $article = new Article();
+        $article->author = auth()->user()->name;
         $article->fill($data);
 
         if ($request->has('image')) {

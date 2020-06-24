@@ -12,6 +12,7 @@ class CommentsController extends Controller
     {
         $data = $request->all();
         $comment = new Comment();
+        $comment->author = auth()->user()->name;
         $comment->fill($data);
         $comment->article_id = $id;
         $comment->save();
