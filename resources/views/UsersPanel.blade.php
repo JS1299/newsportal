@@ -31,7 +31,7 @@
                                             @else Moderator
                                         @endif
                                         </td>
-                                        <td><a href="#">Suspend user</a></td>
+                                        <td><a href="">Suspend user</a></td>
                                     </tr>
                                 @empty
                                     <tr>
