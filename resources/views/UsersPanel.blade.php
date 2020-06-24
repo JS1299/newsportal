@@ -8,9 +8,9 @@
                         <table class="table">
                             <thead>
                             <tr>
-
                                 <th>User</th>
                                 <th>Email</th>
+                                <th>Role</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -19,10 +19,15 @@
                                     <tr>
                                         <td>
                                             @if($user->image != "")<img src="{{ $user->image }}" style="width: 40px; height: 40px; border-radius: 50%; margin-bottom: 5px;"/>
-                                            @else [No image]
+                                            @else <i class="alert-danger">[No image]</i>
                                             @endif
-                                        {{ $user->name }}</td>
+                                        {{ $user->name }}
+                                                @if(auth()->user() == $user)
+                                                    <strong class="alert-danger">It's you!</strong>
+                                                @endif</td>
+
                                         <td>{{ $user->email }}</td>
+                                        <td>{{ $user->role }}</td>
                                         <td><a href="#">Suspend user</a></td>
                                     </tr>
                                 @empty
