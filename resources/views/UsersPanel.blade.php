@@ -21,11 +21,9 @@
                                             @if($user->image != "")<img src="{{ $user->image }}" style="width: 40px; height: 40px; border-radius: 50%; margin-bottom: 5px;"/>
                                             @else <i class="alert-danger">[No image]</i>
                                             @endif
+                                            @if(auth()->user() == $user)<strong class="alert-danger">You: </strong>@endif
                                         {{ $user->name }}
-                                                @if(auth()->user() == $user)
-                                                    <strong class="alert-danger">It's you!</strong>
-                                                @endif</td>
-
+                                        </td>
                                         <td>{{ $user->email }}</td>
                                         <td>
                                             @if($user->role == 0)User
