@@ -9,12 +9,10 @@ class UsersController extends Controller
 {
     public function users()
     {
+        $this->authorize('create', User::class);
         $users = User::all();
         return view('UsersPanel', compact('users'));
     }
-
-
-
 
     public function destroy(User $user)
     {
