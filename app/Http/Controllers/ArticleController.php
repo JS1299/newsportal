@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Category;
+use App\Comment;
 use App\Traits\UploadTrait;
 use Illuminate\Support\Str;
 use \Auth;

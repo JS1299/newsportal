@@ -42,5 +42,5 @@ Route::put('/article/page/edit/{article}', 'ArticleController@updateArticle')->n
 
 Route::delete('/article/page/delete/{article}', 'ArticleController@delete')->name('deleteArticle');
 
-Route::get('/manualuser', 'createusercontroller@newuser')->name('createUser');
+Route::get('/manualuser', 'createusercontroller@newuser')->name('CreateUser');
 

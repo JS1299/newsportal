@@ -9,7 +9,7 @@
                 <h6>{{ __('Added') }}: {{$article->created_at}}</h6>
                 <img id="articleimg" src="{{$article->image}}" />
                 <p>{!!$article->content!!}</p>
-                <div class="comments">
+                {{-- <div class="comments">
                     <ul class="list-group">
                         @foreach($comments->comm_content as $comment)
                             <li class="list-group-item">
@@ -19,6 +19,7 @@
                         @endforeach
                     </ul>
                 </div>
+                --}}
             </div>
         </div>
     </div>

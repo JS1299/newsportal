@@ -8,7 +8,8 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th>Name</th>
+
+                                <th>User</th>
                                 <th>Email</th>
                                 <th>Action</th>
                             </tr>
@@ -16,7 +17,12 @@
                             <tbody>
                                 @forelse ($users as $user)
                                     <tr>
-                                        <td>{{ $user->name }}</td>
+                                        <td>
+                                            @if($user->image != "")<img src="{{ $user->image }}" style="width: 40px; height: 40px; border-radius: 50%; margin-bottom: 5px;"/>
+                                            @else [No image]
+                                            @endif
+
+                                        {{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td><a href="#">Suspend user</a></td>
                                     </tr>
