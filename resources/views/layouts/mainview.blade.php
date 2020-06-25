@@ -20,7 +20,7 @@
         <nav id = "des">
             <ul class="menu">
                 <li class="left inline logo">
-                    <a href="{{ url('/') }}">
+                    <a id="aAa" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </li>
@@ -46,7 +46,7 @@
                         {{--                        </a>--}}
 
                         @if (auth()->user()->image)
-                            <a id="navbarDropdown" class="nav-link1 dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link1 dropdown-toggle aclass" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 <img src="{{ asset(auth()->user()->image) }}" style="width: 40px; height: 40px; border-radius: 50%; margin-bottom: 5px;">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
@@ -58,14 +58,14 @@
 
 
                         <div id="fix" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('profile') }}">{{ ('Profile') }}</a>
+                            <a class="dropdown-item aclass" href="{{ route('profile') }}">{{ ('Profile') }}</a>
                             @if(auth()->user()->role == 1 || auth()->user()->role == 2)
-                                <a href="{{ route('newArticle') }}" class="dropdown-item">{{ ('Add Article') }}</a>
+                                <a href="{{ route('newArticle') }}" class="dropdown-item aclass">{{ ('Add Article') }}</a>
                             @endif
 
                             @if(auth()->user()->role == 1)
-                                <a class="dropdown-item" href="{{ route('listOfUsers') }}">{{('Users')}}</a>
-                                <a class="dropdown-item" href="{{ route('CreateModerator')  }}">{{('Create a new moderator')}}</a>
+                                <a class="dropdown-item aclass" href="{{ route('listOfUsers') }}">{{('Users')}}</a>
+                                <a class="dropdown-item aclass" href="{{ route('CreateModerator')  }}">{{('Create a new moderator')}}</a>
                             @endif
 
                             <a class="dropdown-item" href="{{ route('logout') }}"

@@ -74,7 +74,14 @@ li.right1
     bottom: 28px;
 }
 
-header a:link{
+header a:link
+{
+    text-decoration:none;
+    color:#FFFFFF;
+}
+
+header a:visited
+{
     text-decoration:none;
     color:#FFFFFF;
 }
@@ -239,5 +246,26 @@ a#comments2
 a#comments2:hover
 {
     color: #ffad46;
+    text-decoration: none;
+}
+
+#userspanel
+{
+    padding-top: 100px;
+}
+
+#aAa
+{
+ color: white;
+}
+
+#aAa:hover
+{
+    color: #ffad46;
+}
+
+.aclass
+{
+    color: white;
     text-decoration: none;
 }

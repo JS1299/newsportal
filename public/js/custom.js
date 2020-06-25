@@ -38,7 +38,6 @@ function getUserList() {
             $('#get_data').append(`<table class="table table-hover dt-responsive nowrap userList" id="example" style="width:100%">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Action</th>
@@ -51,7 +50,6 @@ function getUserList() {
             response.forEach(element => {
                 if(element.role != 1){
                 $('.userList tbody').append(`<tr>
-                        <td>${element.id}</td>
                         <td>${element.name}</td>
                         <td>${element.email}</td>
                         <td>
