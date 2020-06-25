@@ -1,6 +1,17 @@
 @extends('layouts.mainview')
 @section('content')
     <div id="forma" class="container">
+        @if ($errors->any())
+            <div>
+                <div>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        @endif
         <div>
             <h1>Fill a new moderator's credentials:</h1>
             <form action="{{route('storeModerator')}}" method="POST">

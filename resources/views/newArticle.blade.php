@@ -2,6 +2,18 @@
 @section('content')
 
 <div class="container" id="forma">
+    @if ($errors->any())
+        <div>
+            <div>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    @endif
+
     @if(auth()->user()->status == 1)
         <h2 class="center alert-danger">Sorry, you cannot post an article, because you are blocked!</h2>
     @else

@@ -37,6 +37,15 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+
+        $data = request()->validate([
+            'title' => 'required',
+            'categories_id' => 'required',
+            'brief_desc' => 'required',
+            'content' => 'required',
+            'image' => '',
+        ]);
+
         $article = new Article();
         $article->author = auth()->user()->name;
         $article->fill($data);

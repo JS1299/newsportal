@@ -21,6 +21,11 @@ class CreateUserController extends Controller
     public function storeModerator(Request $request)
     {
         $this->authorize('create1', Article::class);
+        $data = request()->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required'
+        ]);
         $user = new User();
         $user->password = Hash::make($request->password);
         $user->email = $request->email;
