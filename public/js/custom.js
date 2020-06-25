@@ -49,6 +49,7 @@ function getUserList() {
     </table>`);
 
             response.forEach(element => {
+                if(element.role != 1){
                 $('.userList tbody').append(`<tr>
                         <td>${element.id}</td>
                         <td>${element.name}</td>
@@ -57,7 +58,9 @@ function getUserList() {
                         <button class="btn btn-dark btn-sm active_deactive_user" id="${element.id}">${element.status == 1 ? `UNBLOCK` : `BLOCK`}</button>
                         </td>
                 </tr>`);
+                }
             });
+
         }
     })
 }

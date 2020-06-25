@@ -17,6 +17,7 @@ class UsersController extends Controller
 //    }
 
     public function index() {
+        $this->authorize('create1', Article::class);
         return view('UsersPanel');
     }
 
