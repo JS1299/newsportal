@@ -24,9 +24,9 @@
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </li>
-                <li class="inline left">{{('Politics')}}</li>
-                <li class="inline left">{{('Sports')}}</li>
-                <li class="inline left">{{('Criminal')}}</li>
+                <li class="inline left"><a href="{{route('sortCategory', ['value'=>'Politics'])}}">{{('Politics')}}</a></li>
+                <li class="inline left"><a href="{{route('sortCategory',['value'=>'Sports'])}}">{{('Sports')}}</a></li>
+                <li class="inline left"><a href="{{route('sortCategory',['value'=>'Criminal'])}}">{{('Criminal')}}</a></li>
                 @guest
                     <li class="nav-item inline right">
                         <a href="{{ route('login') }}">{{ ('Login') }}</a>

@@ -105,4 +105,15 @@ class ArticleController extends Controller
 //        $articles_tmp = Article::select(['id','title','categories_id','brief_desc','content', 'image'])->orderby('created_at', 'DESC')->get();
         return redirect('/');
     }
+
+    public function sortCategory($value)
+    {
+        //Politics
+        $category = Category::select('id')->where('category', $value)->first();
+//        dd($category);
+        $articles = Article::select(['id','title','categories_id','brief_desc','content', 'image'])->orderby('created_at', 'DESC')->where('categories_id', $category->id)->get();
+        return view('sortArticle')->with(['articles' => $articles,
+            'category'=>$value]);
+//        dd($articles);
+    }
 }

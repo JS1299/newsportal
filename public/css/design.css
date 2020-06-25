@@ -269,3 +269,9 @@ a#comments2:hover
     color: white;
     text-decoration: none;
 }
+
+.category
+{
+    color:black;
+    padding-top:85px;
+}

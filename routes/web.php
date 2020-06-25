@@ -46,3 +46,5 @@ Route::delete('/article/page/delete/{article}', 'ArticleController@delete')->nam
 
 Route::get('/addModerator', 'CreateUserController@newModerator')->name('CreateModerator');
 Route::post('/addModerator', 'CreateUserController@storeModerator')->name('storeModerator');
+
+Route::get('/sort/category/{value}', 'ArticleController@sortCategory')->name('sortCategory');
